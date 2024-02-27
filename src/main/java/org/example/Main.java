@@ -1,7 +1,6 @@
 package org.example;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,14 +15,11 @@ public class Main {
         System.out.println();
 
         TeacherList teacherList = new TeacherList(new ArrayList<>());
-        teacherList.addTeacher(new Teacher("Q", "Q", "Q", 1984));
-        teacherList.addTeacher(new Teacher("W", "W", "W", 1975));
-        teacherList.addTeacher(new Teacher("E", "E", "E", 1990));
+        teacherList.addTeacher(new Teacher(10,"Q", "Q", "Q", 1984));
+        teacherList.addTeacher(new Teacher(11, "W", "W", "W", 1975));
+        teacherList.addTeacher(new Teacher(12, "E", "E", "E", 1990));
 
         TeacherView teacherView = new TeacherView();
         teacherView.sendOnConsole(teacherList.teacherList);
-
-
-
     }
 }
