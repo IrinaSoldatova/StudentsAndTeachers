@@ -15,11 +15,17 @@ public class Main {
         System.out.println();
 
         TeacherList teacherList = new TeacherList(new ArrayList<>());
-        teacherList.addTeacher(new Teacher(10,"Q", "Q", "Q", 1984));
+        teacherList.addTeacher(new Teacher(10,"A", "A", "A", 1984));
         teacherList.addTeacher(new Teacher(11, "W", "W", "W", 1975));
         teacherList.addTeacher(new Teacher(12, "E", "E", "E", 1990));
 
         TeacherView teacherView = new TeacherView();
+        teacherView.sendOnConsole(teacherList.teacherList);
+
+        System.out.println();
+
+        TeacherService teacherService = new TeacherService(teacherList);
+        teacherService.getSortedTeacherByFIO();
         teacherView.sendOnConsole(teacherList.teacherList);
     }
 }
